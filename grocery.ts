@@ -1,27 +1,30 @@
-class Grocery {
-  /*item: string;
-  quantity: number;*/
+let groceryItemName = [];
 
-  constructor(
-    public item: string,
-    public quantity: number
-  ) {
+// Grocery classthat takes in thename of the itemand quantity purchased
+class Grocery {
+  item : string;
+  quantity: number;
+
+  constructor(item: string, quantity: number) {
     this.item = item;
     this.quantity = quantity;
+
+    // Pushes items to the global groceryItem array
+    groceryItemName.push([this.item, this.quantity]);
   }
 }
 
-function showList(groceryItem: Grocery) {
-  return `${groceryItem.item}: ${groceryItem.quantity}`
+// Loops through the groceryItemArray and outputs the name and quantity of items
+function listGroceries() {
+  for (let i = 0; i <groceryItemName.length; i++) {
+    document.body.innerHTML += `<p>${groceryItemName[i][0]}: ${groceryItemName[i][1]}</p>`
+  }
 }
 
+// Creates objects in the Grocery class
+let tomatoes = new Grocery("Tomatoes", 1);
+let milk = new Grocery("Milk", 3);
+let onions = new Grocery("Onions", 5);
 
-let groceryList = new Grocery();
-
-let newItem = new Grocery("Tomatoes", 3);
-let newItem2 = new Grocery("Onions", 5);
-let newItem3 = new Grocery("Milk", 1);
-let newItem4 = new Grocery("14.5oz Chickpeas", 2);
-
-
-document.body.textContent = showList(newItem);
+// The function that displays the text output on the screen
+listGroceries();
