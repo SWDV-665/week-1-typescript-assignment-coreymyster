@@ -16,7 +16,7 @@ class Grocery {
 
 // Loops through the groceryItemArray and outputs the name and quantity of items
 function listGroceries() {
-  for (let i = 0; i <groceryItemName.length; i++) {
+  for (let i = 0; i < groceryItemName.length; i++) {
     document.body.innerHTML += `<p>${groceryItemName[i][0]}: ${groceryItemName[i][1]}</p>`
   }
 }
