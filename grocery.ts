@@ -25,6 +25,7 @@ function listGroceries() {
 let tomatoes = new Grocery("Tomatoes", 1);
 let milk = new Grocery("Milk", 3);
 let onions = new Grocery("Onions", 5);
+let cilantro = new Grocery("Cilantro", 2);
 
 // The function that displays the text output on the screen
 listGroceries();
